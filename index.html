@@ -7,14 +7,14 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Georgia, serif;
-    text-align:center;
-    background:linear-gradient(-45deg,#1e3c72,#2a5298,#ff758c,#ffb199);
-    background-size:400% 400%;
-    animation:fondo 18s ease infinite;
-    color:white;
-    overflow-x:hidden;
+margin:0;
+font-family:Georgia, serif;
+text-align:center;
+background:linear-gradient(-45deg,#1e3c72,#2a5298,#ff758c,#ffb199);
+background-size:400% 400%;
+animation:fondo 18s ease infinite;
+color:white;
+overflow-x:hidden;
 }
 
 @keyframes fondo{
@@ -23,70 +23,57 @@ body{
 100%{background-position:0% 50%;}
 }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-}
+.container{max-width:900px;margin:auto;padding:40px 20px;}
 
-h1{
-    font-size:38px;
-    animation:brillo 2s infinite alternate;
-}
-
+h1{font-size:38px;animation:brillo 2s infinite alternate;}
 @keyframes brillo{
 from{text-shadow:0 0 5px white;}
-to{text-shadow:0 0 20px pink;}
+to{text-shadow:0 0 25px pink;}
 }
 
-p{
-    font-size:19px;
-    line-height:1.8;
-    max-width:650px;
-    margin:20px auto;
-}
+p{font-size:19px;line-height:1.8;max-width:650px;margin:20px auto;}
 
 img,video{
-    width:85%;
-    max-width:420px;
-    border-radius:18px;
-    margin-top:18px;
-    box-shadow:0 0 25px rgba(255,255,255,0.4);
+width:85%;
+max-width:420px;
+border-radius:18px;
+margin-top:18px;
+box-shadow:0 0 25px rgba(255,255,255,0.4);
 }
 
 /* BOTÓN MÚSICA */
 #musicaBtn{
-    position:fixed;
-    top:15px;
-    right:15px;
-    padding:12px 20px;
-    border:none;
-    border-radius:25px;
-    background:#ff4d6d;
-    color:white;
-    cursor:pointer;
-    font-size:15px;
-    z-index:999;
+position:fixed;
+top:15px;
+right:15px;
+padding:12px 20px;
+border:none;
+border-radius:25px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+font-size:15px;
+z-index:999;
 }
 
 /* BOTÓN FINAL */
 #btnFinal{
-    margin-top:40px;
-    padding:15px 28px;
-    font-size:18px;
-    border:none;
-    border-radius:28px;
-    background:#ff4d6d;
-    color:white;
-    cursor:pointer;
+margin-top:40px;
+padding:15px 28px;
+font-size:18px;
+border:none;
+border-radius:28px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
 }
 
 #mensajeFinal{
-    display:none;
-    margin-top:25px;
-    font-size:26px;
-    font-weight:bold;
-    animation:aparecer 1.5s ease;
+display:none;
+margin-top:25px;
+font-size:26px;
+font-weight:bold;
+animation:aparecer 1.5s ease;
 }
 
 @keyframes aparecer{
@@ -94,33 +81,30 @@ from{opacity:0; transform:translateY(20px);}
 to{opacity:1; transform:translateY(0);}
 }
 
-.heart{
-    position:fixed;
-    bottom:-10px;
-    animation:subir 7s linear infinite;
+/* ANIMACIONES */
+.estrella,.heart,.confeti,.girasol{
+position:fixed;
+bottom:-20px;
+animation:subir 8s linear infinite;
 }
 
 @keyframes subir{
 from{transform:translateY(0); opacity:1;}
-to{transform:translateY(-110vh); opacity:0;}
+to{transform:translateY(-120vh); opacity:0;}
 }
+
 </style>
 </head>
 
 <body>
 
-<button id="musicaBtn" onclick="activarMusica()">🎵 Música</button>
-
-<!-- Música oculta -->
-<div style="display:none;">
-<iframe id="player" width="0" height="0" allow="autoplay"></iframe>
-</div>
+<button id="musicaBtn" onclick="musica()">🎵 Música</button>
 
 <div class="container">
 
 <h1>Feliz Cumpleaños ❤️</h1>
-<h2>13 de Febrero — 22 años de luz</h2>
-    
+<h2>13 de Febrero — 22 años de luz ✨</h2>
+
 <p>
 Hoy celebras un año más de vida…  
 y aunque la vida cambie los caminos,  
@@ -142,16 +126,14 @@ que hayas sido parte de mi historia.
 
 <h2>Nuestros recuerdos ❤️</h2>
 
-<!-- IMÁGENES (deben estar en la misma carpeta que index.html) -->
-<img src="IMG_20250307_140950.jpg" alt="foto1">
-<img src="IMG_20260213_044312.jpg" alt="foto2">
+<img src="IMG_20250307_140950.jpg">
+<img src="IMG_20260213_044312.jpg">
 
-<!-- VIDEO (nombre exacto, mismo folder que index) -->
 <br>
-<video controls playsinline preload="metadata">
+<video controls playsinline>
 <source src="33fffcf70880e045ca7ad963f26b86a7.mp4" type="video/mp4">
 </video>
-       
+
 <p>
 Hoy no escribo para pedir nada…  
 solo para desearte paz, sonrisas  
@@ -159,45 +141,57 @@ y que la vida te trate bonito.
 </p>
 
 <p>
-Te quise.
-Te quiero.
-Y de una forma madura y sincera,
-siempre voy a agradecer que hayas sido parte de mi vida.
+Te quise.  
+Te quiero.  
+Y siempre voy a agradecer que hayas sido parte de mi vida.
 </p>
 
-<button id="btnFinal" onclick="mostrarMensaje()">Feliz Cumpleaños Peque 🎂</button>
-
-<div id="mensajeFinal">
+<p>    
 En tus 22 años deseo que la vida te abrace fuerte.
 Que encuentres paz.
 Que nunca olvides lo valiosa que eres
 y que siempre mereces lo mejor ❤️.
 Que cada sueño tuyo encuentre su camino.
+</p>
+    
+<button id="btnFinal" onclick="mostrarMensaje()">Feliz Cumpleaños Peque 🎂</button>
+
+<div id="mensajeFinal">
+Que la vida te abrace fuerte,  
+que encuentres paz, felicidad  
+y que cada sueño tuyo encuentre su camino ❤️
 </div>
 
 </div>
 
 <script>
 
-function activarMusica(){
-document.getElementById("player").src=
-"https://www.youtube.com/embed/0G4d8R3Jk8Y?autoplay=1&loop=1";
+/* MÚSICA REAL FUNCIONANDO */
+function musica(){
+window.open("https://www.youtube.com/watch?v=0G4d8R3Jk8Y","_blank");
+document.getElementById("musicaBtn").innerText="🔊 Sonando...";
 }
 
+/* MENSAJE FINAL */
 function mostrarMensaje(){
 document.getElementById("mensajeFinal").style.display="block";
 }
 
-/* Corazones */
-setInterval(()=>{
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(20+Math.random()*30)+"px";
-document.body.appendChild(h);
-setTimeout(()=>h.remove(),7000);
-},500);
+/* ANIMACIONES BONITAS */
+function crear(clase,emoji){
+let e=document.createElement("div");
+e.className=clase;
+e.innerHTML=emoji;
+e.style.left=Math.random()*100+"vw";
+e.style.fontSize=(20+Math.random()*25)+"px";
+document.body.appendChild(e);
+setTimeout(()=>e.remove(),8000);
+}
+
+setInterval(()=>crear("estrella","✨"),1200);
+setInterval(()=>crear("heart","❤️"),700);
+setInterval(()=>crear("confeti","🎉"),1500);
+setInterval(()=>crear("girasol","🌻"),2000);
 
 </script>
 
