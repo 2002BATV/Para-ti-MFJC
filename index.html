@@ -6,447 +6,196 @@
 <title>13 de Febrero ❤️</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff758c, #ffb199);
-  background-size: 400% 400%;
-  animation: fondo 18s ease infinite;
-  color: white;
-  overflow-x: hidden;
+body{
+  margin:0;
+  font-family:'Georgia',serif;
+  background:linear-gradient(-45deg,#1e3c72,#2a5298,#ff758c,#ffb199);
+  background-size:400% 400%;
+  animation:fondo 18s ease infinite;
+  color:white;
+  overflow-x:hidden;
+}
+@keyframes fondo{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-@keyframes fondo {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+.container{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
 }
 
-.estrellas {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  overflow: hidden;
-  z-index: 0;
+h1{font-size:36px;animation:brillo 2s infinite alternate;}
+@keyframes brillo{
+from{text-shadow:0 0 5px white;}
+to{text-shadow:0 0 20px pink;}
 }
 
-.estrella {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: white;
-  border-radius: 50%;
-  animation: brillar 3s infinite alternate;
+h2{margin-top:50px;color:#ffe4f2;font-weight:normal;}
+p{font-size:18px;line-height:1.9;margin-bottom:22px;}
+
+img,video{
+width:90%;
+max-width:500px;
+border-radius:15px;
+margin-top:15px;
+box-shadow:0 0 25px rgba(255,255,255,0.4);
 }
 
-@keyframes brillar {
-  from { opacity: 0.2; }
-  to { opacity: 1; }
+button{
+margin-top:40px;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+box-shadow:0 0 15px pink;
+transition:.3s;
+}
+button:hover{transform:scale(1.1);}
+
+.mensajeFinal{
+display:none;
+margin-top:40px;
+font-size:32px;
+color:#fff;
+animation:aparecer 2s forwards;
+}
+@keyframes aparecer{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
 }
 
-.container {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
+/* elementos flotantes */
+.heart,.confeti,.girasol{
+position:fixed;
+bottom:-20px;
+font-size:22px;
+animation:subir 8s linear infinite;
 }
-
-h1 {
-  font-size: 36px;
-  animation: brillo 2s infinite alternate;
+@keyframes subir{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-100vh);opacity:0;}
 }
-
-@keyframes brillo {
-  from { text-shadow: 0 0 5px white; }
-  to { text-shadow: 0 0 20px pink; }
+.balloon{
+position:fixed;
+bottom:-100px;
+font-size:30px;
+animation:flotar 12s linear infinite;
 }
-
-h2 {
-  margin-top: 50px;
-  color: #ffe4f2;
-  font-weight: normal;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 22px;
-}
-
-.gallery {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255,255,255,0.4);
-}
-
-.heart, .confeti {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;
-  animation: subir 8s linear infinite;
-}
-
-@keyframes subir {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-100vh); opacity: 0; }
-}
-
-.balloon {
-  position: fixed;
-  bottom: -100px;
-  font-size: 30px;
-  animation: flotar 12s linear infinite;
-}
-
-@keyframes flotar {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-120vh); }
-}
-
-footer {
-  margin-top: 70px;
-  font-style: italic;
-  opacity: 0.9;
+@keyframes flotar{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="estrellas"></div>
+<!-- Música -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/8YQ0z8-3rjo?autoplay=1&loop=1&playlist=8YQ0z8-3rjo"
+frameborder="0" allow="autoplay"></iframe>
 
 <div class="container">
 
 <h1>🎂 Feliz Cumpleaños ❤️</h1>
-<h2>13 de Febrero — 22 años de vida, historia y luz ✨</h2>
+<h2>13 de Febrero — 22 años de historia ✨</h2>
 
 <p>
-Hoy cumples 22 años…  
-y aunque quizás no estemos caminando juntos como antes,  
-hay cosas que el tiempo no borra, ni la distancia cambia.  
-Y una de ellas es lo importante que fuiste y sigues siendo en mi historia.
+Hoy cumples un año más de vida…  
+y aunque el camino nos llevó por rutas distintas,  
+hay recuerdos que siguen teniendo un lugar especial en mí.
 </p>
 
 <p>
-Contigo conocí momentos que marcaron mi vida.  
-No todo fue perfecto, pero fue real…  
-y lo real deja huella.
-</p>
-
-<p>
-Fuimos ilusión, fuimos sueños, fuimos hogar por un tiempo.  
-Y de todo eso nació lo más bonito que la vida pudo regalarnos.
+Contigo viví momentos reales,  
+aprendí cosas que no se olvidan,  
+y de ese capítulo nació lo más bonito que tengo.
 </p>
 
 <h2>Nuestra hija 👶💖</h2>
 
 <p>
-Ella es la prueba viva de que lo nuestro existió de verdad.  
-En su sonrisa hay parte de ti,  
-en sus gestos hay parte de mí,  
-y en su existencia hay una historia que siempre nos unirá.
+Ella es la prueba de que lo nuestro existió de verdad.  
+En su risa hay parte de ti,  
+en su mirada hay parte de mí,  
+y en su vida hay una historia que siempre nos unirá.
 </p>
 
-<p>
-Gracias por ella.  
-Gracias por el amor que un día compartimos.  
-Gracias por cada recuerdo que, aunque pase el tiempo,  
-sigue teniendo un lugar especial en mi corazón.
-</p>
+<h2>Nuestros recuerdos ❤️</h2>
 
-<section style="text-align:center; margin-top:40px;">
+<img src="IMG_20250307_140950.jpg">
+<img src="IMG_20260213_044312.jpg">
 
-  <h2>Nuestros recuerdos ❤️</h2>
-
-  <img src="IMG_20250307_140950.jpg" style="width:80%; max-width:400px; border-radius:15px; margin:10px;">
-
-  <img src="IMG_20260213_044312.jpg" style="width:80%; max-width:400px; border-radius:15px; margin:10px;">
-
-  <video controls style="width:90%; max-width:500px; border-radius:15px; margin-top:15px;">
-    <source src="33fffcf70880e045ca7ad963f26b86a7.mp4" type="video/mp4">
-  </video>
-
-</section>
+<video controls>
+<source src="33fffcf70880e045ca7ad963f26b86a7.mp4" type="video/mp4">
+</video>
 
 <h2>Lo que deseo para ti 🌹</h2>
 
 <p>
-Hoy en tu cumpleaños no escribo desde el pasado,  
-sino desde el respeto, el cariño y la gratitud.
+Hoy no escribo desde el pasado,  
+sino desde el cariño, el respeto y la gratitud.  
+Deseo que encuentres paz, felicidad y sueños cumplidos.
 </p>
 
 <p>
-Deseo que la vida te regale tranquilidad,  
-que encuentres felicidad donde decidas caminar,  
-que nunca olvides lo fuerte que eres  
-y que cada meta que tengas encuentre su momento.
-</p>
-
-<p>
-No sé qué traerá el futuro,  
-pero sí sé que siempre voy a valorar lo que fuimos,  
-lo que aprendimos  
+Siempre voy a valorar lo que fuimos  
 y lo que juntos trajimos al mundo.
 </p>
 
-<p>
-Feliz cumpleaños.  
-De corazón. ❤️
-</p>
+<button onclick="mostrarMensaje()">Haz clic aquí ❤️</button>
 
-<footer>
-Con cariño, respeto y verdad.  
-Siempre deseándote lo mejor ✨
-</footer>
+<div class="mensajeFinal" id="mensaje">
+Feliz cumpleaños peque 💖
+</div>
 
 </div>
 
 <script>
-// estrellas
-for(let i=0;i<80;i++){
-  let star=document.createElement("div");
-  star.className="estrella";
-  star.style.top=Math.random()*100+"vh";
-  star.style.left=Math.random()*100+"vw";
-  document.querySelector(".estrellas").appendChild(star);
+function mostrarMensaje(){
+document.getElementById("mensaje").style.display="block";
 }
 
-// corazones
+// animaciones flotantes
 setInterval(()=>{
-  let heart=document.createElement("div");
-  heart.className="heart";
-  heart.innerHTML="❤️";
-  heart.style.left=Math.random()*100+"vw";
-  document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),8000);
+let h=document.createElement("div");
+h.className="heart";h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),8000);
 },600);
 
-// confeti
 setInterval(()=>{
-  let confeti=document.createElement("div");
-  confeti.className="confeti";
-  confeti.innerHTML="🎉";
-  confeti.style.left=Math.random()*100+"vw";
-  document.body.appendChild(confeti);
-  setTimeout(()=>confeti.remove(),8000);
+let c=document.createElement("div");
+c.className="confeti";c.innerHTML="🎉";
+c.style.left=Math.random()*100+"vw";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),8000);
 },900);
 
-// globos
 setInterval(()=>{
-  let balloon=document.createElement("div");
-  balloon.className="balloon";
-  balloon.innerHTML="🎈";
-  balloon.style.left=Math.random()*100+"vw";
-  document.body.appendChild(balloon);
-  setTimeout(()=>balloon.remove(),12000);
-},3000);
-</script>
+let g=document.createElement("div");
+g.className="girasol";g.innerHTML="🌻";
+g.style.left=Math.random()*100+"vw";
+document.body.appendChild(g);
+setTimeout(()=>g.remove(),8000);
+},1400);
 
-</body>
-</html>
-  height: 3px;
-  background: white;
-  border-radius: 50%;
-  animation: brillar 3s infinite alternate;
-}
-
-@keyframes brillar {
-  from { opacity: 0.2; }
-  to { opacity: 1; }
-}
-
-.container {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 36px;
-  animation: brillo 2s infinite alternate;
-}
-
-@keyframes brillo {
-  from { text-shadow: 0 0 5px white; }
-  to { text-shadow: 0 0 20px pink; }
-}
-
-h2 {
-  margin-top: 50px;
-  color: #ffe4f2;
-  font-weight: normal;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 22px;
-}
-
-.gallery {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255,255,255,0.4);
-}
-
-.heart, .confeti {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;
-  animation: subir 8s linear infinite;
-}
-
-@keyframes subir {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-100vh); opacity: 0; }
-}
-
-.balloon {
-  position: fixed;
-  bottom: -100px;
-  font-size: 30px;
-  animation: flotar 12s linear infinite;
-}
-
-@keyframes flotar {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-120vh); }
-}
-
-footer {
-  margin-top: 70px;
-  font-style: italic;
-  opacity: 0.9;
-}
-</style>
-</head>
-
-<body>
-
-<div class="estrellas"></div>
-
-<div class="container">
-
-<h1>🎂 Feliz Cumpleaños ❤️</h1>
-<h2>13 de Febrero — 22 años de luz</h2>
-
-<p>
-Hoy celebras 22 años desde aquel 13 de febrero de 2004.
-Y aunque la vida haya tomado caminos distintos,
-no cambia el lugar tan especial que ocupas en mi historia.
-</p>
-
-<p>
-Fuimos amor.
-Fuimos hogar.
-Fuimos esperanza.
-Y de ese amor nació el regalo más hermoso que la vida pudo darnos.
-</p>
-
-<h2>Gracias por nuestra hija 👶💖</h2>
-
-<p>
-Nuestra pequeña es la prueba más hermosa de que lo nuestro fue real.
-En su risa está tu dulzura.
-En sus ojos está tu brillo.
-Y en cada paso que da,
-hay una parte de nosotros.
-</p>
-
-<section style="text-align:center; margin-top:40px;">
-
-  <h2>Nuestros recuerdos ❤️</h2>
-
-  <img src="IMG_20250307_140950.jpg" style="width:80%; max-width:400px; border-radius:15px; margin:10px;">
-
-  <img src="IMG_20260213_044312.jpg">
-
-  <video controls style="width:90%; max-width:500px; border-radius:15px; margin-top:15px;">
-    <source src="33fffcf70880e045ca7ad963f26b86a7.mp4" type="video/mp4">
-  </video>
-
-</section>
-
-<h2>Lo que deseo para ti 🌹</h2>
-
-<p>
-En tus 22 años deseo que la vida te abrace fuerte.
-Que encuentres paz.
-Que nunca olvides lo valiosa que eres.
-Que cada sueño tuyo encuentre su camino.
-</p>
-
-<p>
-Te quise.
-Te quiero.
-Y de una forma madura y sincera,
-siempre voy a agradecer que hayas sido parte de mi vida.
-</p>
-
-<footer>
-Con respeto, cariño y verdad ❤️
-</footer>
-
-</div>
-
-<script>
-// estrellas
-for(let i=0;i<80;i++){
-  let star=document.createElement("div");
-  star.className="estrella";
-  star.style.top=Math.random()*100+"vh";
-  star.style.left=Math.random()*100+"vw";
-  document.querySelector(".estrellas").appendChild(star);
-}
-
-// corazones
 setInterval(()=>{
-  let heart=document.createElement("div");
-  heart.className="heart";
-  heart.innerHTML="❤️";
-  heart.style.left=Math.random()*100+"vw";
-  document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),8000);
-},600);
-
-// confeti
-setInterval(()=>{
-  let confeti=document.createElement("div");
-  confeti.className="confeti";
-  confeti.innerHTML="🎉";
-  confeti.style.left=Math.random()*100+"vw";
-  document.body.appendChild(confeti);
-  setTimeout(()=>confeti.remove(),8000);
-},900);
-
-// globos
-setInterval(()=>{
-  let balloon=document.createElement("div");
-  balloon.className="balloon";
-  balloon.innerHTML="🎈";
-  balloon.style.left=Math.random()*100+"vw";
-  document.body.appendChild(balloon);
-  setTimeout(()=>balloon.remove(),12000);
+let b=document.createElement("div");
+b.className="balloon";b.innerHTML="🎈";
+b.style.left=Math.random()*100+"vw";
+document.body.appendChild(b);
+setTimeout(()=>b.remove(),12000);
 },3000);
 </script>
 
