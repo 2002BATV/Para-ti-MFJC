@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>13 de Febrero ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff758c, #ffb199);
+  background-size: 400% 400%;
+  animation: fondo 18s ease infinite;
+  color: white;
+  overflow-x: hidden;
+}
+
+@keyframes fondo {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.estrellas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.estrella {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: brillar 3s infinite alternate;
+}
+
+@keyframes brillar {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+  from { text-shadow: 0 0 5px white; }
+  to { text-shadow: 0 0 20px pink; }
+}
+
+h2 {
+  margin-top: 50px;
+  color: #ffe4f2;
+  font-weight: normal;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.gallery {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+.heart, .confeti {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: subir 8s linear infinite;
+}
+
+@keyframes subir {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  font-size: 30px;
+  animation: flotar 12s linear infinite;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
+
+footer {
+  margin-top: 70px;
+  font-style: italic;
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="estrellas"></div>
+
+<div class="container">
+
+<h1>🎂 Feliz Cumpleaños ❤️</h1>
+<h2>13 de Febrero — 22 años de luz</h2>
+
+<p>
+Hoy celebras 22 años desde aquel 13 de febrero de 2004.
+Y aunque la vida haya tomado caminos distintos,
+no cambia el lugar tan especial que ocupas en mi historia.
+</p>
+
+<p>
+Fuimos amor.
+Fuimos hogar.
+Fuimos esperanza.
+Y de ese amor nació el regalo más hermoso que la vida pudo darnos.
+</p>
+
+<h2>Gracias por nuestra hija 👶💖</h2>
+
+<p>
+Nuestra pequeña es la prueba más hermosa de que lo nuestro fue real.
+En su risa está tu dulzura.
+En sus ojos está tu brillo.
+Y en cada paso que da,
+hay una parte de nosotros.
+</p>
+
+<h2>Nuestros recuerdos 📸</h2>
+
+<div class="gallery">
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto3.jpg">
+</div>
+
+<h2>Lo que deseo para ti 🌹</h2>
+
+<p>
+En tus 22 años deseo que la vida te abrace fuerte.
+Que encuentres paz.
+Que nunca olvides lo valiosa que eres.
+Que cada sueño tuyo encuentre su camino.
+</p>
+
+<p>
+Te quise.
+Te quiero.
+Y de una forma madura y sincera,
+siempre voy a agradecer que hayas sido parte de mi vida.
+</p>
+
+<footer>
+Con respeto, cariño y verdad ❤️
+</footer>
+
+</div>
+
+<script>
+// estrellas
+for(let i=0;i<80;i++){
+  let star=document.createElement("div");
+  star.className="estrella";
+  star.style.top=Math.random()*100+"vh";
+  star.style.left=Math.random()*100+"vw";
+  document.querySelector(".estrellas").appendChild(star);
+}
+
+// corazones
+setInterval(()=>{
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),8000);
+},600);
+
+// confeti
+setInterval(()=>{
+  let confeti=document.createElement("div");
+  confeti.className="confeti";
+  confeti.innerHTML="🎉";
+  confeti.style.left=Math.random()*100+"vw";
+  document.body.appendChild(confeti);
+  setTimeout(()=>confeti.remove(),8000);
+},900);
+
+// globos
+setInterval(()=>{
+  let balloon=document.createElement("div");
+  balloon.className="balloon";
+  balloon.innerHTML="🎈";
+  balloon.style.left=Math.random()*100+"vw";
+  document.body.appendChild(balloon);
+  setTimeout(()=>balloon.remove(),12000);
+},3000);
+</script>
+
+</body>
+</html>
