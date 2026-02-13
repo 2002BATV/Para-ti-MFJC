@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,7 +60,7 @@ z-index:999;
 /* BOTÓN FINAL */
 #btnFinal{
 margin-top:40px;
-padding:15px 28px;
+padding:16px 30px;
 font-size:18px;
 border:none;
 border-radius:28px;
@@ -68,31 +69,34 @@ color:white;
 cursor:pointer;
 }
 
-#mensajeFinal{
+/* MENSAJE FINAL ANIMADO */
+#final{
 display:none;
-margin-top:25px;
-font-size:26px;
+margin-top:30px;
+}
+
+#textoAnimado{
+font-size:32px;
 font-weight:bold;
-animation:aparecer 1.5s ease;
+opacity:0;
+transform:translateY(20px);
+animation:aparecer 1.5s forwards;
 }
 
 @keyframes aparecer{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+to{opacity:1;transform:translateY(0);}
 }
 
-/* ANIMACIONES */
-.estrella,.heart,.confeti,.girasol{
+/* ANIMACIONES FLOTANTES */
+.float{
 position:fixed;
 bottom:-20px;
 animation:subir 8s linear infinite;
 }
-
 @keyframes subir{
-from{transform:translateY(0); opacity:1;}
-to{transform:translateY(-120vh); opacity:0;}
+from{transform:translateY(0);opacity:1;}
+to{transform:translateY(-120vh);opacity:0;}
 }
-
 </style>
 </head>
 
@@ -106,7 +110,7 @@ to{transform:translateY(-120vh); opacity:0;}
 <h2>13 de Febrero — 22 años de luz ✨</h2>
 
 <p>
-Hoy celebras un año más de vida…  
+Hoy celebras un año más…  
 y aunque la vida cambie los caminos,  
 hay historias que nunca se borran.
 </p>
@@ -114,14 +118,7 @@ hay historias que nunca se borran.
 <p>
 Fuimos amor, fuimos sueños…  
 y de ese amor nació lo más hermoso que tenemos:  
-nuestra princesa 👑.  
-Lo mejor que la vida pudo regalarnos.
-</p>
-
-<p>
-En su sonrisa vive lo bonito que compartimos,  
-y por eso siempre voy a agradecer  
-que hayas sido parte de mi historia.
+nuestra princesa 👑.
 </p>
 
 <h2>Nuestros recuerdos ❤️</h2>
@@ -153,34 +150,36 @@ Que nunca olvides lo valiosa que eres
 y que siempre mereces lo mejor ❤️.
 Que cada sueño tuyo encuentre su camino.
 </p>
-    
-<button id="btnFinal" onclick="mostrarMensaje()">Feliz Cumpleaños Peque 🎂</button>
+   
+<button id="btnFinal" onclick="mostrarFinal()">Hacer click aquí 🎁</button>
 
-<div id="mensajeFinal">
-Que la vida te abrace fuerte,  
-que encuentres paz, felicidad  
-y que cada sueño tuyo encuentre su camino ❤️
+<div id="final">
+<div id="textoAnimado">Feliz cumpleaños Peque ❤️</div>
+
+<br>
+
+<img src="https://media.tenor.com/6xY3dGzK0d8AAAAC/pucca-love.gif" style="width:200px;border-radius:20px;">
 </div>
 
 </div>
 
 <script>
 
-/* MÚSICA REAL FUNCIONANDO */
+/* TU LINK DE MÚSICA */
 function musica(){
-window.open("https://www.youtube.com/watch?v=0G4d8R3Jk8Y","_blank");
+window.open("https://youtu.be/QZKrLIoMyxY","_blank");
 document.getElementById("musicaBtn").innerText="🔊 Sonando...";
 }
 
-/* MENSAJE FINAL */
-function mostrarMensaje(){
-document.getElementById("mensajeFinal").style.display="block";
+/* BOTÓN FINAL */
+function mostrarFinal(){
+document.getElementById("final").style.display="block";
 }
 
-/* ANIMACIONES BONITAS */
-function crear(clase,emoji){
+/* EFECTOS FLOTANTES */
+function crear(emoji){
 let e=document.createElement("div");
-e.className=clase;
+e.className="float";
 e.innerHTML=emoji;
 e.style.left=Math.random()*100+"vw";
 e.style.fontSize=(20+Math.random()*25)+"px";
@@ -188,10 +187,10 @@ document.body.appendChild(e);
 setTimeout(()=>e.remove(),8000);
 }
 
-setInterval(()=>crear("estrella","✨"),1200);
-setInterval(()=>crear("heart","❤️"),700);
-setInterval(()=>crear("confeti","🎉"),1500);
-setInterval(()=>crear("girasol","🌻"),2000);
+setInterval(()=>crear("❤️"),700);
+setInterval(()=>crear("✨"),1300);
+setInterval(()=>crear("🌻"),2000);
+setInterval(()=>crear("🎉"),1700);
 
 </script>
 
